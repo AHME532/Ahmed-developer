@@ -37,6 +37,13 @@
     e.preventDefault(); 
     skillSection.scrollIntoView({ behavior: "smooth" });
   });
+  // github ky liyeh yeh hy
+    const githubLink = "https://github.com/AHME532";
+  const githubIcon = document.querySelector('.fa-github');
+   githubIcon.addEventListener('click', function(e) {
+    e.preventDefault(); 
+    window.open("https://github.com/AHME532", "_blank"); 
+  });
   // mare instagram id 
   const instagramLink = "https://www.instagram.com/ahmed_b0ss47/";
   const instaIcon = document.querySelector('.fa-instagram');
@@ -71,4 +78,5 @@
 
     // Open in new tab/window
     window.open(waLink, "_blank");
+
   });
