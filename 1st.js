@@ -1,4 +1,4 @@
- // Simple typewriter effect
+ // Simple typewriter effec
     document.addEventListener('DOMContentLoaded', function() {
         const texts = ['Web Developer', 'Programmer', 'Freelancer', 'Graphic designer', 'Student'];
         let count = 0;
@@ -65,7 +65,7 @@
     e.preventDefault(); 
     window.open(facebookLink, "_blank"); 
   });
-  const phoneNumber = "923246610364"; 
+  const phoneNumber = "923246610748"; 
   const prefilledText = "Assalamualaikum! Mujhe aapki service ke baare mein maloomat chahiye.";
   document.getElementById("whatsappBtn").addEventListener("click", function (e) {
     e.preventDefault();
@@ -80,3 +80,4 @@
     window.open(waLink, "_blank");
 
   });
+
