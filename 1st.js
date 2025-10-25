@@ -1,4 +1,4 @@
- // Simple typewriter effec
+ // Simple typewriter effect
     document.addEventListener('DOMContentLoaded', function() {
         const texts = ['Web Developer', 'Programmer', 'Freelancer', 'Graphic designer', 'Student'];
         let count = 0;
@@ -37,19 +37,19 @@
     e.preventDefault(); 
     skillSection.scrollIntoView({ behavior: "smooth" });
   });
-  // github ky liyeh yeh hy
-    const githubLink = "https://github.com/AHME532";
-  const githubIcon = document.querySelector('.fa-github');
-   githubIcon.addEventListener('click', function(e) {
-    e.preventDefault(); 
-    window.open("https://github.com/AHME532", "_blank"); 
-  });
   // mare instagram id 
   const instagramLink = "https://www.instagram.com/ahmed_b0ss47/";
   const instaIcon = document.querySelector('.fa-instagram');
    instaIcon.addEventListener('click', function(e) {
     e.preventDefault(); 
     window.open("https://www.instagram.com/ahmed_b0ss47/", "_blank"); 
+  });
+  // github ky liyeh yeh hy
+    const githubLink = "https://github.com/AHME532";
+  const githubIcon = document.querySelector('.fa-github');
+   githubIcon.addEventListener('click', function(e) {
+    e.preventDefault(); 
+    window.open("https://github.com/AHME532", "_blank"); 
   });
     // mare twitter id 
   const twitterLink = "https://x.com/Ahmed_Tariq56"; 
@@ -65,7 +65,7 @@
     e.preventDefault(); 
     window.open(facebookLink, "_blank"); 
   });
-  const phoneNumber = "923246610748"; 
+  const phoneNumber = "923246610364"; 
   const prefilledText = "Assalamualaikum! Mujhe aapki service ke baare mein maloomat chahiye.";
   document.getElementById("whatsappBtn").addEventListener("click", function (e) {
     e.preventDefault();
@@ -78,7 +78,6 @@
 
     // Open in new tab/window
     window.open(waLink, "_blank");
-
   });
 document.addEventListener("DOMContentLoaded", function () {
   const openCode = document.getElementById("openCode");
@@ -175,5 +174,4 @@ document.addEventListener("DOMContentLoaded", function () {
     newTab.document.close();
   });
 });
-
 
