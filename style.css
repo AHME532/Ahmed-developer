@@ -178,7 +178,12 @@ body {
 .progress-bar {
   background-color: var(--primary-color);
 }
-
+.progress-bar1 {
+  width: 0;
+  height: 100%;
+  background-color: #17a2b8; /* same blue */
+  transition: width 1.5s ease-in-out;
+}
 .skill-label {
   display: flex;
   justify-content: space-between;
