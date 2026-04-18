@@ -45,11 +45,11 @@
     skillSection.scrollIntoView({ behavior: "smooth" });
   });
   // mare instagram id 
-  const instagramLink = "https://www.instagram.com/56_b_a_b_a_r_56//";
+  const instagramLink = "https://www.instagram.com/56_b_a_b_a_r_56/";
   const instaIcon = document.querySelector('.fa-instagram');
    instaIcon.addEventListener('click', function(e) {
     e.preventDefault(); 
-    window.open("https://www.instagram.com/56_b_a_b_a_r_56//", "_blank"); 
+    window.open("https://www.instagram.com/56_b_a_b_a_r_56/", "_blank"); 
   });
   // github ky liyeh yeh hy
     const githubLink = "https://github.com/AHME532";
@@ -95,7 +95,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
   openCode.addEventListener("click", function (e) {
     e.preventDefault();
+document.addEventListener("DOMContentLoaded", function () {
+  const bars = document.querySelectorAll(".progress-bar");
 
+  bars.forEach(bar => {
+    let value = bar.getAttribute("data-width");
+    setTimeout(() => {
+      bar.style.width = value + "%";
+    }, 200);
+  });
+});
+   
     // Yeh HTML content nayi tab mein khulega
     const newTabContent = `
 <!DOCTYPE html>
