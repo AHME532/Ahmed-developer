@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", function () {
   openCode.addEventListener("click", function (e) {
     e.preventDefault();
 document.addEventListener("DOMContentLoaded", function () {
-  const bars = document.querySelectorAll(".progress-bar");
+  const bars = document.querySelectorAll(".progress-bar1");
 
   bars.forEach(bar => {
     let value = bar.getAttribute("data-width");
