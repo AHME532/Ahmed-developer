@@ -1,6 +1,6 @@
  // Simple typewriter effect
     document.addEventListener('DOMContentLoaded', function() {
-        const texts = ['Web Developer', 'Programmer', 'Freelancer', 'Graphic designer', 'Student'];
+        const texts = ['Web Developer', 'Programmer', 'Freelancer', 'Cricketer', 'Student'];
         let count = 0;
         let index = 0;
         let currentText = '';
@@ -45,11 +45,11 @@
     skillSection.scrollIntoView({ behavior: "smooth" });
   });
   // mare instagram id 
-  const instagramLink = "https://www.instagram.com/ahmed_b0ss47/";
+  const instagramLink = "https://www.instagram.com/56_b_a_b_a_r_56//";
   const instaIcon = document.querySelector('.fa-instagram');
    instaIcon.addEventListener('click', function(e) {
     e.preventDefault(); 
-    window.open("https://www.instagram.com/ahmed_b0ss47/", "_blank"); 
+    window.open("https://www.instagram.com/56_b_a_b_a_r_56//", "_blank"); 
   });
   // github ky liyeh yeh hy
     const githubLink = "https://github.com/AHME532";
@@ -72,11 +72,11 @@
     e.preventDefault(); 
     window.open(facebookLink, "_blank"); 
   });
-  const phoneNumber = "923246610364"; 
-  const prefilledText = "Assalamualaikum! Mujhe aapki service ke baare mein maloomat chahiye.";
+  const phoneNumber = "923246610748"; 
+  const prefilledText = "Assalam-o-Alaikum! How can I help you ?";
 //   ab alert massage ky liyeh
         function showalert() {
-            alert("Your message has been submited!");
+            alert("Your message has been forwaded!");
         }
   document.getElementById("whatsappBtn").addEventListener("click", function (e) {
     e.preventDefault();
