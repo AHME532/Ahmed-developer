@@ -295,7 +295,9 @@ body {
   background-color: var(--light-bg);
   text-align: center;
 }
-
+.icon:hover{
+    transition: all 0.3s ease;
+} 
 /* Responsive Adjustments */
 @media (max-width: 991.98px) {
   .header-section {
