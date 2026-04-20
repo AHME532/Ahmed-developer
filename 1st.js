@@ -1,4 +1,5 @@
-    document.addEventListener('DOMContentLoaded', function() {
+
+document.addEventListener('DOMContentLoaded', function() {
         const texts = ['Web Developer', 'Programmer', 'Freelancer', 'Cricketer', 'Student'];
         let count = 0;
         let index = 0;
@@ -37,7 +38,7 @@
     portfolioSection.scrollIntoView({ behavior: "smooth" });
   });
   //skill ka scroll
-    const skillLink = document.querySelector('.nav-link[href="#skills-section"]');
+    const skillLink = document.querySelector('.nav-link[href="#skills"]');
   const skillSection = document.querySelector('.skills-section');
   skillLink.addEventListener('click', function (e) {
     e.preventDefault(); 
