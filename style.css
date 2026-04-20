@@ -3,7 +3,33 @@
   --secondary-color: #333;
   --light-bg: #eef8fd;
 }
+/* Fix for main content offset on large screens */
+@media (min-width: 992px) {
+    .offset-xl-2 {
+        margin-left: 20%;
+    }
+    
+    .offset-lg-3 {
+        margin-left: 25%;
+    }
+    
+    .offset-md-4 {
+        margin-left: 33.33333333%;
+    }
+}
 
+/* Ensure no horizontal scroll */
+body {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+}
+
+.container-fluid {
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
