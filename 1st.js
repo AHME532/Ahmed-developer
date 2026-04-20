@@ -1,3 +1,53 @@
+// jQuery version
+$(document).ready(function() {
+    // Counter function
+    function animateCounter(element, target) {
+        $({ count: 0 }).animate({ count: target }, {
+            duration: 2000,
+            easing: 'swing',
+            step: function() {
+                $(element).text(Math.floor(this.count));
+            },
+            complete: function() {
+                $(element).text(target);
+            }
+        });
+    }
+    
+    // Check if element is in viewport
+    function isInViewport(element) {
+        const rect = element.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
+    
+    // Start counters when in viewport
+    function startCountersOnScroll() {
+        $('.counter').each(function() {
+            if (isInViewport(this) && $(this).text() === '0') {
+                const target = parseInt($(this).data('target'));
+                animateCounter(this, target);
+            }
+        });
+    }
+    
+    // Start on load and scroll
+    $(window).on('load scroll', startCountersOnScroll);
+    
+    // Optional: Start on hover
+    $('.stat-box').hover(function() {
+        $(this).find('.counter').each(function() {
+            if ($(this).text() === '0') {
+                const target = parseInt($(this).data('target'));
+                animateCounter(this, target);
+            }
+        });
+    });
+});
 // ==================== TYPEWRITER EFFECT ====================
 document.addEventListener('DOMContentLoaded', function() {
     const texts = ['Web Developer', 'Programmer', 'Freelancer', 'Cricketer', 'Student'];
