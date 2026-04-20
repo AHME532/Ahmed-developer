@@ -655,7 +655,6 @@ body {
     
     .social-icon i {
         font-size: 0.9em;
-        margin: 0 3px;
         padding: 5px;
     }
     
@@ -663,17 +662,7 @@ body {
         display: inline-flex;
         align-items: center;
         justify-content: center;
-    }
-    
-    /* Fix for WhatsApp icon */
-    #whatsappBtn i {
-        font-size: 0.9em !important;
-        background-color: #25D366;
-        padding: 5px;
-        border-radius: 50%;
-        color: white !important;
-    }
-    
+    }    
     .nav-link {
         padding: 8px 12px;
         font-size: 13px;
