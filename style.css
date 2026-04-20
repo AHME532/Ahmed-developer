@@ -346,7 +346,7 @@ body {
     transition: all 0.3s ease;
 } 
 /* Responsive Adjustments */
-/* @media (max-width: 991.98px) {
+@media (max-width: 991.98px) {
   .header-section {
       position: fixed;
       height: 100vh;
@@ -398,7 +398,7 @@ body {
   .section-title {
       font-size: 1.8rem;
   }
-} */
+}
 /* Media Query for screens larger than 768px */
 @media (min-width: 769px) {
     .header-section {
