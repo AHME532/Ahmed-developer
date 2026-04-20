@@ -89,6 +89,8 @@ body {
     
     .social-icon i {
         font-size: 0.8em;
+        text-decoration: none !important;
+        border-bottom: none !important;
         padding: 4px;
         margin: 0 2px;
     }
@@ -136,6 +138,8 @@ body {
     }
     
     .social-icon i {
+        text-decoration: none !important;
+        border-bottom: none !important;
         font-size: 0.9em;
         margin: 0 4px;
         padding: 5px;
@@ -144,6 +148,8 @@ body {
     .nav-link {
         padding: 8px 12px;
         font-size: 14px;
+          text-decoration: none !important;
+    border-bottom: none !important;
         display: inline-block;
         width: auto;
     }
