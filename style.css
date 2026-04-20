@@ -12,14 +12,14 @@ body {
 }
 
 /* Header Section */
-.header-section {
+/* .header-section {
   background-color: var(--secondary-color);
   background-color: rgb(6, 41, 47);
   color: white;
   height: 100vh;
   position: fixed;
   overflow-y: auto;
-}
+} */
 
 .logo {
   width: 125px;
@@ -41,7 +41,53 @@ body {
   font-size: 20px;
   margin-top: 10px;
 }
+/* Header Section - Complete Fix */
+.header-section {
+    background-color: rgb(6, 41, 47);
+    color: white;
+    height: 100vh;
+    position: fixed;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
 
+/* Fix for all screen sizes */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .header-section {
+        width: 100%;
+    }
+    
+    .social-icon {
+        gap: 3px;
+    }
+    
+    .social-icon i {
+        font-size: 0.8em;
+        padding: 4px;
+        margin: 0 2px;
+    }
+    
+    .nav-link {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+    .social-icon i {
+        font-size: 1em;
+        padding: 6px;
+        margin: 0 4px;
+    }
+}
+
+/* Mobile fix */
+@media (max-width: 991px) {
+    .header-section {
+        position: relative;
+        height: auto;
+    }
+}
 /* For mobile devices */
 @media (max-width: 767px) {
     .header-section {
@@ -204,7 +250,59 @@ body {
   margin: 0;
   color: var(--primary-color);
 }
+/* Add to your style.css */
 
+/* Stats Section Hover Effects */
+.stat-box {
+    text-align: center;
+    padding: 20px;
+    transition: all 0.3s ease;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.stat-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+}
+
+.stat-box .icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    display: inline-block;
+}
+
+/* Icon grows on hover */
+.stat-box:hover .icon {
+    transform: scale(1.3) rotate(5deg);
+}
+
+/* Number hover effect */
+.stat-box:hover h2 {
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    color: #ff6b6b;
+}
+
+/* Individual icon colors on hover */
+.stat-box:hover .fa-face-smile { color: #ffd700; }
+.stat-box:hover .fa-clipboard { color: #4ecdc4; }
+.stat-box:hover .fa-headphones { color: #ff6b6b; }
+.stat-box:hover .fa-users { color: #a8e6cf; }
+
+/* Ripple effect on icon click */
+.icon:active {
+    transform: scale(0.95);
+}
+
+.counter-num {
+    font-size: 36px;
+    margin: 0;
+    color: var(--primary-color);
+    transition: all 0.3s ease;
+}
 /* Skills Section */
 .skills-section {
   padding: 80px 0;
@@ -488,4 +586,184 @@ body {
     .row > :not(.header-section) {
         margin-left: auto;
     }
+}
+/* Add this at the end of your style.css file */
+
+/* Fix for screens 992px and above - Complete Responsive Sidebar */
+@media (min-width: 992px) {
+    .header-section {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100%;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    
+    .d-flex.flex-column {
+        padding: 15px 5px !important;
+    }
+    
+    .logo {
+        width: 100px;
+        height: 100px;
+        margin: 10px auto;
+    }
+    
+    .img-name {
+        font-size: 16px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding: 0 5px;
+    }
+    
+    .social-icon {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 5px;
+        padding: 5px;
+    }
+    
+    .social-icon i {
+        font-size: 0.9em;
+        margin: 0 3px;
+        padding: 5px;
+    }
+    
+    .social-icon a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    /* Fix for WhatsApp icon */
+    #whatsappBtn i {
+        font-size: 0.9em !important;
+        background-color: #25D366;
+        padding: 5px;
+        border-radius: 50%;
+        color: white !important;
+    }
+    
+    .nav-link {
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+    
+    .nav-link i {
+        margin-right: 8px;
+        font-size: 12px;
+    }
+}
+
+/* For screens 1200px and above */
+@media (min-width: 1200px) {
+    .logo {
+        width: 115px;
+        height: 115px;
+        margin: 15px auto;
+    }
+    
+    .img-name {
+        font-size: 18px;
+    }
+    
+    .social-icon i {
+        font-size: 1em;
+        margin: 0 5px;
+        padding: 6px;
+    }
+    
+    .nav-link {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+    
+    .nav-link i {
+        font-size: 14px;
+    }
+}
+
+/* For screens 1400px and above */
+@media (min-width: 1400px) {
+    .logo {
+        width: 125px;
+        height: 125px;
+    }
+    
+    .img-name {
+        font-size: 20px;
+    }
+    
+    .social-icon i {
+        font-size: 1.1em;
+        margin: 0 6px;
+        padding: 7px;
+    }
+    
+    .nav-link {
+        padding: 12px 18px;
+        font-size: 15px;
+    }
+}
+
+/* For screens 1600px and above */
+@media (min-width: 1600px) {
+    .logo {
+        width: 140px;
+        height: 140px;
+    }
+    
+    .img-name {
+        font-size: 22px;
+    }
+    
+    .social-icon i {
+        font-size: 1.2em;
+        margin: 0 8px;
+        padding: 8px;
+    }
+    
+    .nav-link {
+        padding: 12px 20px;
+        font-size: 16px;
+    }
+}
+
+/* Fix for column widths on large screens */
+@media (min-width: 992px) {
+    .col-xl-2 {
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
+    
+    .col-xl-10 {
+        flex: 0 0 80%;
+        max-width: 80%;
+    }
+    
+    .offset-xl-2 {
+        margin-left: 20%;
+    }
+}
+
+/* Ensure WhatsApp icon is always visible */
+.social-icon a#whatsappBtn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#whatsappBtn i {
+    background-color: #25D366;
+    color: white !important;
+    transition: all 0.3s ease;
+}
+
+#whatsappBtn i:hover {
+    transform: scale(1.1);
+    background-color: #128C7E;
 }
