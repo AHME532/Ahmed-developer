@@ -471,29 +471,6 @@ body {
     }
 }
 
-/* For large screens (1200px and above) */
-@media (min-width: 1200px) {
-    .logo {
-        width: 140px;
-        height: 140px;
-    }
-    
-    .img-name {
-        font-size: 22px;
-    }
-    
-    .social-icon i {
-        font-size: 1.3em;
-        margin: 0 10px;
-        padding: 10px;
-    }
-    
-    .nav-link {
-        padding: 14px 20px;
-        font-size: 18px;
-    }
-}
-
 /* Ensure the main content doesn't overlap with sidebar */
 @media (min-width: 769px) {
     .main-content {
