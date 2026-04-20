@@ -90,22 +90,14 @@
     // Open in new tab/window
     window.open(waLink, "_blank");
   });
-document.addEventListener("DOMContentLoaded", function () {
-  const openCode = document.getElementById("openCode");
-
-  openCode.addEventListener("click", function (e) {
-    e.preventDefault();
-document.addEventListener("DOMContentLoaded", function () {
-  const bars = document.querySelectorAll(".progress-bar1");
+window.onload = () => {
+  const bars = document.querySelectorAll(".progress-bar");
 
   bars.forEach(bar => {
-    let value = bar.getAttribute("data-width");
-    setTimeout(() => {
-      bar.style.width = value + "%";
-    }, 200);
+    let width = bar.getAttribute("data-width");
+    bar.style.width = width;
   });
-});
-   
+};
     // Yeh HTML content nayi tab mein khulega
     const newTabContent = `
 <!DOCTYPE html>
