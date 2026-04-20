@@ -37,7 +37,7 @@
     portfolioSection.scrollIntoView({ behavior: "smooth" });
   });
   //skill ka scroll
-    const skillLink = document.querySelector('.nav-link[href="#skills"]');
+    const skillLink = document.querySelector('.nav-link[href="#skills-section"]');
   const skillSection = document.querySelector('.skills-section');
   skillLink.addEventListener('click', function (e) {
     e.preventDefault(); 
@@ -2340,48 +2340,6 @@ opacity: 1;
     btn.addEventListener("click", function() {
       btn.innerText = "Unsubscribe";
     });
-    // mare insta id ky liyeh
-    const instagramLink = "https://www.instagram.com/ahmed_b0ss47/";
-    const instagram = document.querySelector('#fa-instagram');
-    instagram.addEventListener('click', function(e) {
-    e.preventDefault(); 
-    window.open("https://www.instagram.com/ahmed_b0ss47/", "_blank"); 
-    });
-      // mare twitter id 
-    const twitterLink = "https://x.com/Ahmed_Tariq56"; 
-    const twitter = document.querySelector('#fa-twitter');
-    twitter.addEventListener('click', function(e) {
-    e.preventDefault(); 
-    window.open(twitterLink, "_blank"); 
-    });
-    // ywh facebook ka hy
-    const facebookLink = "https://www.facebook.com/Muhammad Tariq";
-    const facebook = document.querySelector('#fa-facebook');
-    facebook.addEventListener('click', function(e) {
-    e.preventDefault(); 
-    window.open(facebookLink, "_blank"); 
-    });
-      // mare insta id ky liyeh
-    const instagramLink2 = "https://www.instagram.com/ahmed_b0ss47/";
-    const instagram2 = document.querySelector('#fainstagram');
-    instagram2.addEventListener('click', function(e) {
-    e.preventDefault(); 
-    window.open("https://www.instagram.com/ahmed_b0ss47/", "_blank"); 
-    });
-      // mare twitter id 
-    const twitterLink2 = "https://x.com/Ahmed_Tariq56"; 
-    const twitter2 = document.querySelector('#fatwitter');
-    twitter2.addEventListener('click', function(e) {
-    e.preventDefault(); 
-    window.open(twitterLink, "_blank"); 
-    });
-    // ywh facebook ka hy
-    const facebookLink2 = "https://www.facebook.com/Muhammad Tariq";
-    const facebook2 = document.querySelector('#fafacebook');
-    facebook2.addEventListener('click', function(e) {
-    e.preventDefault(); 
-    window.open(facebookLink, "_blank"); 
-    });
     //reply pr click krny pr ! 
     document.getElementById("myBtn").click();
     function myFunction(id) {
@@ -2396,12 +2354,6 @@ opacity: 1;
     x.style.fontWeight = "bold";
     x.innerHTML = "&#10003; Liked";
     }
-    // yeh email submit krny ky liyeh hy!
-    let email=document.getElementById("Subscribe2");
-    email.addEventListener('click',function(e){
-    e.preventDefault(); 
-    alert("Email submitted successfully🫡");
-    })
     </script> -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
   </body>
