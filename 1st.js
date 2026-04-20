@@ -90,14 +90,22 @@
     // Open in new tab/window
     window.open(waLink, "_blank");
   });
-window.onload = () => {
-  const bars = document.querySelectorAll(".progress-bar");
+document.addEventListener("DOMContentLoaded", function () {
+    const bars = document.querySelectorAll(".progress-bar");
 
-  bars.forEach(bar => {
-    let width = bar.getAttribute("data-width");
-    bar.style.width = width;
-  });
-};
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const bar = entry.target;
+                bar.style.width = bar.getAttribute("data-width");
+            }
+        });
+    }, { threshold: 0.5 });
+
+    bars.forEach(bar => {
+        observer.observe(bar);
+    });
+});
     // Yeh HTML content nayi tab mein khulega
     const newTabContent = `
 <!DOCTYPE html>
