@@ -183,7 +183,7 @@ body {
 }
 
 /* Stats Section */
-.stats-section {
+/* .stats-section {
   padding: 60px 0;
   background-color: white;
 }
@@ -203,6 +203,64 @@ body {
   font-size: 36px;
   margin: 0;
   color: var(--primary-color);
+} */
+/* Stats Section */
+.stats-section {
+  padding: 60px 0;
+  background-color: white;
+}
+
+.stat-box {
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect for stat-box */
+.stat-box:hover {
+  transform: translateY(-10px);
+}
+
+.stat-box .icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+  color: var(--primary-color);
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+/* Icon hover effect - becomes larger */
+.stat-box:hover .icon {
+  transform: scale(1.3);
+  color: #ff6b6b; /* Optional: change color on hover */
+}
+
+/* Alternative: If you want icon to grow on individual hover */
+.icon:hover {
+  transform: scale(1.3) !important;
+  cursor: pointer;
+}
+
+.stat-box h2 {
+  font-size: 36px;
+  margin: 0;
+  color: var(--primary-color);
+  transition: all 0.3s ease;
+}
+
+/* Optional: Number hover effect */
+.stat-box:hover h2 {
+  color: #ff6b6b;
+  transform: scale(1.05);
+}
+
+/* Add smooth transitions */
+.stat-box .icon i {
+  transition: all 0.3s ease;
+}
+
+.stat-box:hover .icon i {
+  text-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 
 /* Skills Section */
