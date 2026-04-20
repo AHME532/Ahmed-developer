@@ -1,4 +1,4 @@
-// Simple typewriter effect
+// ==================== TYPEWRITER EFFECT ====================
 document.addEventListener('DOMContentLoaded', function() {
     const texts = ['Web Developer', 'Programmer', 'Freelancer', 'Cricketer', 'Student'];
     let count = 0;
@@ -13,7 +13,10 @@ document.addEventListener('DOMContentLoaded', function() {
         currentText = texts[count];
         letter = currentText.slice(0, ++index);
         
-        document.querySelector('.typer-text').textContent = letter;
+        const typerElement = document.querySelector('.typer-text');
+        if (typerElement) {
+            typerElement.textContent = letter;
+        }
         if (letter.length === currentText.length) {
             count++;
             index = 0;
@@ -24,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }());
 });
 
-// Services ka scroll!
+// ==================== SERVICES SCROLL ====================
 const servicesLink = document.querySelector('.nav-link[href="#services"]');
 const servicesSection = document.querySelector('#services');
 if (servicesLink && servicesSection) {
@@ -34,7 +37,7 @@ if (servicesLink && servicesSection) {
     });
 }
 
-// portfolio ka scroll
+// ==================== PORTFOLIO SCROLL ====================
 const portfolioLink = document.querySelector('.nav-link[href="#portfolio"]');
 const portfolioSection = document.querySelector('#Portfolio');
 if (portfolioLink && portfolioSection) {
@@ -44,7 +47,7 @@ if (portfolioLink && portfolioSection) {
     });
 }
 
-//skill ka scroll
+// ==================== SKILLS SCROLL ====================
 const skillLink = document.querySelector('.nav-link[href="#skills"]');
 const skillSection = document.querySelector('.skills-section');
 if (skillLink && skillSection) {
@@ -54,7 +57,7 @@ if (skillLink && skillSection) {
     });
 }
 
-// mare instagram id 
+// ==================== INSTAGRAM LINK ====================
 const instaIcon = document.querySelector('.fa-instagram');
 if (instaIcon) {
     instaIcon.addEventListener('click', function(e) {
@@ -63,7 +66,7 @@ if (instaIcon) {
     });
 }
 
-// github ky liyeh yeh hy
+// ==================== GITHUB LINK ====================
 const githubIcon = document.querySelector('.fa-github');
 if (githubIcon) {
     githubIcon.addEventListener('click', function(e) {
@@ -72,7 +75,7 @@ if (githubIcon) {
     });
 }
 
-// mare twitter id 
+// ==================== TWITTER LINK ====================
 const twitterIcon = document.querySelector('.fa-x-twitter');
 if (twitterIcon) {
     twitterIcon.addEventListener('click', function(e) {
@@ -81,7 +84,7 @@ if (twitterIcon) {
     });
 }
 
-// ywh facebook ka hy
+// ==================== FACEBOOK LINK ====================
 const faceicon = document.querySelector('.fa-facebook');
 if (faceicon) {
     faceicon.addEventListener('click', function(e) {
@@ -90,10 +93,10 @@ if (faceicon) {
     });
 }
 
+// ==================== WHATSAPP LINK ====================
 const phoneNumber = "923246610748"; 
 const prefilledText = "Assalam-o-Alaikum! How can I help you ?";
 
-// ab alert massage ky liyeh
 function showalert() {
     alert("Your message has been forwaded!");
 }
@@ -108,23 +111,28 @@ if (whatsappBtn) {
     });
 }
 
-// Skills progress bar animation
+// ==================== SKILLS PROGRESS BAR ANIMATION ====================
 document.addEventListener("DOMContentLoaded", function () {
     const bars = document.querySelectorAll(".progress-bar");
+
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 const bar = entry.target;
-                bar.style.width = bar.getAttribute("data-width");
+                const targetWidth = bar.getAttribute("data-width");
+                if (targetWidth) {
+                    bar.style.width = targetWidth;
+                }
             }
         });
     }, { threshold: 0.5 });
+
     bars.forEach(bar => {
         observer.observe(bar);
     });
 });
 
-// Certificate window
+// ==================== CERTIFICATE WINDOW ====================
 document.addEventListener("DOMContentLoaded", function () {
     const openCode = document.getElementById("openCode");
     if (openCode) {
@@ -203,14 +211,16 @@ document.addEventListener("DOMContentLoaded", function () {
 </html>
             `;
             const newTab = window.open();
-            newTab.document.open();
-            newTab.document.write(newTabContent);
-            newTab.document.close();
+            if (newTab) {
+                newTab.document.open();
+                newTab.document.write(newTabContent);
+                newTab.document.close();
+            }
         });
     }
 });
 
-// Portfolio websites window
+// ==================== PORTFOLIO WEBSITES WINDOW ====================
 document.addEventListener("DOMContentLoaded", function () {
     const openweb = document.getElementById("openweb");
     if (openweb) {
@@ -227,10 +237,27 @@ document.addEventListener("DOMContentLoaded", function () {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
       *{box-sizing:border-box}
-      .slider-wrapper {width:100%;overflow:hidden;white-space:nowrap;background:#f5f5f5;padding:20px 0;}
-      .slider {display:inline-block;padding-left:100%;animation:scroll-left 15s linear infinite;}
-      .slider header {display:inline-block;text-align:center;margin:0 50px;}
-      @keyframes scroll-left {0%{transform:translateX(0);}100%{transform:translateX(-100%);}}
+      .slider-wrapper {
+        width:100%;
+        overflow:hidden;
+        white-space:nowrap;
+        background:#f5f5f5;
+        padding:20px 0;
+      }
+      .slider {
+        display:inline-block;
+        padding-left:100%;
+        animation:scroll-left 15s linear infinite;
+      }
+      .slider header {
+        display:inline-block;
+        text-align:center;
+        margin:0 50px;
+      }
+      @keyframes scroll-left {
+        0%{transform:translateX(0);}
+        100%{transform:translateX(-100%);}
+      }
       .w3-bar{width:100%;overflow:hidden}
       .w3-bar .w3-bar-item{padding:8px 16px;float:left;width:auto;border:none;display:block;outline:0}
       .w3-black,.w3-hover-black:hover{color:#fff!important;background-color:#000!important}
@@ -238,48 +265,36 @@ document.addEventListener("DOMContentLoaded", function () {
       .w3-container{padding:0.01em 16px}
       .w3-padding{padding:8px 16px!important}
       .w3-right{float:right!important}
-      .w3-row-padding,.w3-row-padding>.w3-half,.w3-row-padding>.w3-third,.w3-row-padding>.w3-twothird,.w3-row-padding>.w3-threequarter,.w3-row-padding>.w3-quarter,.w3-row-padding>.w3-col{padding:0 8px}
       .w3-col{float:left;width:100%}
-      .w3-col.s5{width:41.66666%}
       .w3-display-container{position:relative}
-      .w3-display-middle{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%)}
-      .w3-light-grey,.w3-hover-light-grey:hover,.w3-light-gray,.w3-hover-light-gray:hover{color:#000!important;background-color:#f1f1f1!important}
-      .w3-section{margin-top:16px!important;margin-bottom:16px!important}
-      .w3-margin-bottom{margin-bottom:16px!important}
-      .w3-tag{background-color:#000;color:#fff;display:inline-block;padding-left:8px;padding-right:8px;text-align:center}
-      .w3-small{font-size:12px!important}
-      .w3-left{float:left!important}
-      .w3-border{border:1px solid #ccc!important}
-      .w3-white{color:#000!important;background-color:#fff!important}
-      .w3-margin{margin:16px!important}
+      .w3-display-left{position:absolute;top:50%;left:0%;transform:translate(0%,-50%);}
       .w3-padding-large{padding:12px 24px!important}
       .w3-image{max-width:100%;height:auto}
-      .w3-row:after,.w3-row:before{content:"";display:table;clear:both}
+      .w3-text-white{color:#fff!important}
+      .w3-jumbo{font-size:64px!important}
+      .w3-hide-small{display:none!important}
+      @media (min-width:601px){.w3-hide-small{display:block!important}}
     </style>
   </head>
   <body>
-    <div class="w3-bar w3-black w3-hide-small">
+    <div class="w3-bar w3-black">
       <a href="#" class="w3-bar-item w3-button"><i class="fa-brands fa-facebook"></i></a>
       <a href="#" class="w3-bar-item w3-button"><i class="fa-brands fa-instagram"></i></a>
-      <a href="#" class="w3-bar-item w3-button"><i class="fa-brands fa-snapchat"></i></a>
-      <a href="#" class="w3-bar-item w3-button"><i class="fa-brands fa-flickr"></i></a>
       <a href="#" class="w3-bar-item w3-button"><i class="fa-brands fa-twitter"></i></a>
-      <a href="#" class="w3-bar-item w3-button"><i class="fa-brands fa-linkedin"></i></a>
-      <a href="#" class="w3-bar-item w3-button w3-right"><i class="fa fa-search"></i></a>
     </div>
     <div class="slider-wrapper">
       <div class="slider">
         <header class="w3-container w3-center w3-padding-48 w3-white" style="display:inline-block">
-          <h1 class="w3-xxxlarge"><b>JANE BLOGLIFE</b></h1>
+          <h1><b>JANE BLOGLIFE</b></h1>
           <h6>Welcome to the blog of <span class="w3-tag">Jane's world</span></h6>
         </header>
         <header class="w3-container w3-center w3-padding-48 w3-white" style="display:inline-block">
-          <h1 class="w3-xxxlarge"><b>JANE LOVELIFE</b></h1>
+          <h1><b>JANE LOVELIFE</b></h1>
           <h6>Welcome to the love of <span class="w3-tag">Jane's world</span></h6>
         </header>
       </div>
     </div>
-    <section class="w3-display-container w3-wide" id="home">
+    <section class="w3-display-container w3-wide">
         <img class="w3-image" src="jan.jpg" alt="Fashion Blog" width="1600" height="1060">
         <div class="w3-display-left w3-padding-large">
           <h1 class="w3-text-white">Jane's</h1>
@@ -287,16 +302,18 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>
     </section>
     <footer class="w3-container w3-dark-grey" style="padding:32px">
-      <a href="#" class="w3-button w3-black w3-padding-large w3-margin-bottom"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
-      <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+      <a href="#" class="w3-button w3-black w3-padding-large w3-margin-bottom">To the top</a>
+      <p>Powered by w3.css</p>
     </footer>
   </body>
 </html>
             `;
             const newTab = window.open();
-            newTab.document.open();
-            newTab.document.write(newTabContent2);
-            newTab.document.close();
+            if (newTab) {
+                newTab.document.open();
+                newTab.document.write(newTabContent2);
+                newTab.document.close();
+            }
         });
     }
 });
