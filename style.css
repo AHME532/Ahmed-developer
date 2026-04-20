@@ -333,7 +333,7 @@ body {
       margin-bottom: 30px;
   }
 }
-@media (min-width: 1500px) {
+@media (min-width: 768px) {
 .logo{
   width: 200px;
   height: 200px;
