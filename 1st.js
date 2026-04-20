@@ -1,3 +1,70 @@
+// ==================== STATS COUNTER ANIMATION ====================
+document.addEventListener('DOMContentLoaded', function() {
+    
+    // Counter animation function
+    function animateCounter(counterElement) {
+        const target = parseInt(counterElement.getAttribute('data-target'));
+        let current = 0;
+        const increment = target / 80; // Smooth animation
+        const duration = 2000; // 2 seconds
+        const stepTime = duration / 80;
+        
+        // Don't animate if already at target
+        if (parseInt(counterElement.innerText) === target) {
+            return;
+        }
+        
+        const updateCounter = setInterval(() => {
+            current += increment;
+            if (current >= target) {
+                counterElement.innerText = target;
+                clearInterval(updateCounter);
+            } else {
+                counterElement.innerText = Math.floor(current);
+            }
+        }, stepTime);
+    }
+    
+    // Start counter on hover
+    const statBoxes = document.querySelectorAll('.stat-box');
+    let countersStarted = false;
+    
+    statBoxes.forEach(box => {
+        box.addEventListener('mouseenter', function() {
+            const counter = this.querySelector('.counter-num');
+            if (counter && parseInt(counter.innerText) === 0) {
+                animateCounter(counter);
+            }
+        });
+    });
+    
+    // Also trigger when section comes into view (optional)
+    const statsSection = document.querySelector('.stats-section');
+    let countersAnimated = false;
+    
+    const observerOptions = {
+        threshold: 0.3,
+        rootMargin: "0px"
+    };
+    
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !countersAnimated) {
+                countersAnimated = true;
+                const counters = document.querySelectorAll('.counter-num');
+                counters.forEach(counter => {
+                    if (parseInt(counter.innerText) === 0) {
+                        animateCounter(counter);
+                    }
+                });
+            }
+        });
+    }, observerOptions);
+    
+    if (statsSection) {
+        observer.observe(statsSection);
+    }
+});
 // ==================== TYPEWRITER EFFECT ====================
 document.addEventListener('DOMContentLoaded', function() {
     const texts = ['Web Developer', 'Programmer', 'Freelancer', 'Cricketer', 'Student'];
